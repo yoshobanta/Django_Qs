@@ -1,0 +1,6 @@
+Revision
+Django ORM
+Shell based orm .
+Web display our data in table . insertion in cmd . already inserted data .
+Filtering . Then used filedlookup( __ ) for filtering .
+Objetc based somthing ...(absent ) . query method and objects

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DeptToEmp</h1>
+        {% for DEO in QSLDEO %}
+        {% if DEO.emp_set.all %}
+            <h2>{{DEO.dept_name}} , {{DEO.location}}</h2>
+            <table border="3px">
+                <tr>
+                    <th>EmpNo</th>
+                    <th>EmpName</th>
+                    <th>Sal</th>
+                </tr>
+                {% for EO in DEO.emp_set.all %}
+
+                    <tr>
+                        <td>{{EO.emp_no}}</td>
+                        <td>{{EO.emp_name}}</td>
+                        <td>{{EO.sal}}</td>
+                    </tr>
+        
+                    {% endfor %}
+                </table>
+        {% endif %} 
+        {% endfor %}
+    </center>
+</body>
+</html>

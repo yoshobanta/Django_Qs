@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>EmpToMgr</h1>
+
+        <table border="3px">
+            <tr>
+                <th>Emp No</th>
+                <th>Emp Name</th>
+                <th>Emp Job</th>
+                <th>Emp Manager</th>
+                <th>Emp Sal</th>
+                <th>Emp Comm</th>
+                
+                <th>Mgr No</th>
+                <th>Mgr Name</th>
+                <th>Mgr Job</th>
+                <th>Mgr Manager</th>
+                <th>Mgr Sal</th>
+                <th>Mgr Comm</th>
+            </tr>
+            {% for edo in QSLEMO %}
+            <tr>
+                <td>{{ edo.emp_no }}</td>
+                <td>{{ edo.emp_name }}</td>
+                <td>{{ edo.job }}</td>
+                <td>{{ edo.mgr }}</td>
+                <td>{{ edo.sal }}</td>
+                <td>{{ edo.comm }}</td>
+
+                <td>{{ edo.mgr.emp_no }}</td>
+                <td>{{ edo.mgr.emp_name }}</td>
+                <td>{{ edo.mgr.job }}</td>
+                <td>{{ edo.mgr.mgr }}</td>
+                <td>{{ edo.mgr.sal }}</td>
+                <td>{{ edo.mgr.comm }}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

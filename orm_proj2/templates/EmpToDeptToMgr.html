@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>EmpToDeptToMgr</h1>
+
+      <table border="3px">
+        <tr>
+          <th>EmpNo</th>
+          <th>EmpName</th>
+          <th>Salary</th>
+          <th>DeptNo</th>
+          <th>DeptName</th>
+          <th>Location</th>
+          <th>MgrEmpno</th>
+          <th>MgrEmpName</th>
+          <th>MgrSal</th>
+        </tr>
+
+        {% for edmo in QSLEDMO %}
+        <tr>
+          <td>{{ edmo.emp_no }}</td>
+          <td>{{ edmo.emp_name }}</td>
+          <td>{{ edmo.sal }}</td>
+          <td>{{ edmo.dept_no.dept_no }}</td>
+          <td>{{ edmo.dept_no.dept_name }}</td>
+          <td>{{ edmo.dept_no.dept_location }}</td>
+          <td>{{ edmo.mgr.emp_no }}</td>
+          <td>{{ edmo.mgr.emp_name }}</td>
+          <td>{{ edmo.mgr.sal }}</td>
+
+        </tr>
+        {% endfor %}
+      </table>
+    </center>
+  </body>
+</html>

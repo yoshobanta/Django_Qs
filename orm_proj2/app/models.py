@@ -9,6 +9,8 @@ class Dept(models.Model):
     location = models.CharField(max_length=100,null=True, blank=True)
     
     
+    
+    
 class Emp(models.Model):
     emp_no = models.SmallIntegerField(primary_key=True)
     emp_name = models.CharField(max_length=100)
@@ -17,7 +19,7 @@ class Emp(models.Model):
     hiredate = models.DateField(null=True, blank=True)
     sal = models.IntegerField(null=True, blank=True)
     comm = models.IntegerField(null=True, blank=True) # this is commission field or bonus .
-    dept_no = models.ForeignKey(Dept, on_delete=models.CASCADE)   # deptno   
+    dept_no = models.ForeignKey(Dept, on_delete=models.CASCADE)   # deptno
     
     
 # This an independent salary grade table.

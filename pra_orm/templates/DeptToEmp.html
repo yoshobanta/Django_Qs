@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+}   </style>
+</head>
+<body>
+    <center>
+        <h1>DeptToEmp</h1>
+        {% for DEO in QSLDEO %}
+        {% if DEO.emp_set.all %}
+            <h3>  {{DEO.deptno}} , {{ DEO.dname }} ,{{DEO.dlocation}}  </h3>
+            <table class = 'container' >
+                <tr>
+                    <th> EmpNo </th>
+                    <th>EmpName</th>
+                    <th> Job </th>
+                    <th>Sal </th>
+                    
+                </tr>
+                {% for EO in DEO.emp_set.all %}
+                    <tr>
+                        <td>{{EO.empno}}</td>
+                        <td>{{EO.ename}}</td>
+                        <td>{{EO.job}}</td>
+                        <td>{{EO.sal}}</td>
+                    </tr>
+                    {%endfor%}
+                </table>
+        {% endif %}
+        {% endfor %}
+    </center>
+</body>
+</html>
