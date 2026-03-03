@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>insert_dept</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="dno">Dept No</label>
+            <input type="number" name="dno" id="dno">
+            <br><br>
+            <label for="dn">Dept Name</label>
+            <input type="text" name="dn" id="dn">
+            <br><br>
+            <label for="dl">Dept Location</label>
+            <input type="text" name="dl" id = 'dl'>
+            <br><br>
+            <input type="submit">
+            
+        </form>
+    </center>
+</body>
+</html>

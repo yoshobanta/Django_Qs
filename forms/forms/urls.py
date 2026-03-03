@@ -18,7 +18,29 @@ from django.contrib import admin
 from django.urls import path
 from app.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('htmlforms/',htmlforms,name='htmlforms')
+    path('htmlforms/',htmlforms,name='htmlforms'),
+    path('insert_topic/',insert_topic , name='insert_topic'),
+    path('insert_webpage/',insert_webpage,name = 'insert_webpage'),
+    path('select_multiple/',select_multiple,name='select_multiple'),
+    path('checkbox/',checkbox,name='checkbox'),
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    path('insert_dept/',insert_dept,name='insert_dept')
 ]
